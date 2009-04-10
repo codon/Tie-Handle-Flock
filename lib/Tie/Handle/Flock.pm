@@ -44,10 +44,9 @@ sub unlock {
 	flock($fh, LOCK_UN);
 }
 
-__PACKAGE__
 =head1 NAME
 
-Tie::Handle::Flock - The great new Tie::Handle::Flock!
+Tie::Handle::Flock - exclusive locking write handle
 
 =head1 VERSION
 
@@ -55,35 +54,11 @@ Version 0.01
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+	use Tie::Handle::Flock;
 
-Perhaps a little code snippet.
+	tie *FH, 'Tie::Handle::Flock', '>', 'some_file.txt';
 
-    use Tie::Handle::Flock;
-
-    my $foo = Tie::Handle::Flock->new();
-    ...
-
-=head1 EXPORT
-
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
-
-=head1 FUNCTIONS
-
-=head2 function1
-
-=cut
-
-sub function1 {
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
-}
+	print FH "exclusive lock obtained for duration of the write\n";
 
 =head1 AUTHOR
 
@@ -92,10 +67,8 @@ Ivan Heffner, C<< <iheffne at gmail.com> >>
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-tie-handle-flock at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie-Handle-Flock>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie-Handle-Flock>.  I will
+be notified, and then you'll automatically be notified of progress on your bug as I make changes.
 
 
 =head1 SUPPORT
@@ -126,9 +99,6 @@ L<http://cpanratings.perl.org/d/Tie-Handle-Flock>
 L<http://search.cpan.org/dist/Tie-Handle-Flock/>
 
 =back
-
-
-=head1 ACKNOWLEDGEMENTS
 
 
 =head1 COPYRIGHT & LICENSE
