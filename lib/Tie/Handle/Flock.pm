@@ -5,7 +5,7 @@ use strict;
 
 require Tie::Handle;
 our @ISA = qw(Tie::StdHandle);
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Fcntl qw(:flock :seek);
 
@@ -50,7 +50,7 @@ Tie::Handle::Flock - exclusive locking write handle
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 SYNOPSIS
 
@@ -62,7 +62,7 @@ Version 0.01
 
 =head1 AUTHOR
 
-Ivan Heffner, C<< <iheffne at gmail.com> >>
+Ivan Heffner, C<< <iheffner+tie.handle.flock at gmail.com> >>
 
 =head1 BUGS
 

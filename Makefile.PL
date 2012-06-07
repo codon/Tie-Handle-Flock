@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'Tie::Handle::Flock',
-    AUTHOR              => 'Ivan Heffner <iheffne@gmail.com>',
+    AUTHOR              => 'Ivan Heffner <iheffner+tie.handle.flock@gmail.com>',
     VERSION_FROM        => 'lib/Tie/Handle/Flock.pm',
     ABSTRACT_FROM       => 'lib/Tie/Handle/Flock.pm',
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
